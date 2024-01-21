@@ -16,7 +16,9 @@ const Patient = ({ name, gender, age, date, symptoms, time }) => {
       <div className="patient-info">
         <header>
           <span>{name}님</span>
-          {gender} {age}
+          <span style={{ fontSize: "15px", padding: "0px", margin: "0px" }}>
+            {gender} {age}
+          </span>
         </header>
         <div className="detail">
           <span>예약 신청일</span> <br></br>
