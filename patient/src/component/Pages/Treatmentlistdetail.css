@@ -1,0 +1,18 @@
+.small-button {
+    text-align: right;
+    background-color: #C7EEFF;
+    color: black;
+    font-weight: bold;
+    font-size: 20px; /* Adjust the font size as needed */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 1200px;
+    padding: 5px 30px;
+}
+
+h2 {
+    text-align: center;
+    margin: 20px;
+}
+  

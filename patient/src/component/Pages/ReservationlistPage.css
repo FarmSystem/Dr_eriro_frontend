@@ -1,0 +1,53 @@
+h1 {
+  text-align: center;
+}
+
+.reservation-item {
+    border: 1px solid #ccc; /* 사각형 테두리 스타일 */
+    padding: 10px; /* 각 예약 내역의 패딩 */
+    margin: 40px; /* 각 예약 내역의 아래 여백 */
+    display: flex; /* 아이템을 가로로 배치 */
+  }
+
+  .doctor-image img {
+    max-width: 200px; /* 원하는 최대 가로 너비 */
+    max-height: 200px; /* 원하는 최대 세로 높이 */
+    width: auto; /* 가로 크기를 최대 가로 너비에 맞게 조절 */
+    height: auto; /* 세로 크기를 최대 세로 높이에 맞게 조절 */
+  }
+
+  .info-container {
+    flex: 1; /* 남은 공간을 차지하도록 함 */
+    margin-left: 10px; /* 의사 사진과 정보 사이의 여백 */
+  }
+  
+  .doctor-info {
+    font-size: xx-large;
+    display: flex;
+    align-items: baseline; /* 기준선에 따라 정렬 (의사 이름과 병원 이름을 기준선에 맞춤) */
+  }
+  
+  .doctor-name {
+    font-weight: bold;
+  }
+  
+  .hospital-name {
+    margin-left: 30px;
+    color: #555; /* 병원 이름 색상 */
+    font-size: 20px;
+  }
+  
+  .appointment-info {
+    display: flex;
+    flex-direction: column; /* 세로로 정렬 */
+  }
+  
+  .date {
+    font-weight: bold;
+  }
+  
+  .subject {
+    color: #333; /* 진료 과목 색상 */
+  }
+  
+  

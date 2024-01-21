@@ -1,0 +1,52 @@
+.check {
+    display: flex;
+    align-items: baseline;
+}
+
+.patient-info {
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.tab-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* 가로로 넘칠 경우 다음 줄로 이동 */
+    gap: 10px;
+    /* 탭 사이 간격 */
+    justify-content: left;
+    /* 탭을 수평으로 가운데 정렬 */
+    margin-top: 20px;
+  }
+  
+  .tab {
+    padding: 10px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+  }
+  
+  .tab.active {
+    background-color: #3498db;
+    color: white;
+  }
+
+  .reservation-button {
+    text-align: center;
+    padding: 10px 20px; /* 원하는 크기로 조절합니다. */
+    background-color: #C7EEFF;
+    color: black;
+    font-weight: bold;
+    font-size: 20px; /* 원하는 크기로 조절합니다. */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.check p {
+  margin-left: 50px;
+}

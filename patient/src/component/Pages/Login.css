@@ -1,0 +1,36 @@
+.login-page h1 {
+    margin: 80px;
+}
+
+form {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin: 20px auto;
+}
+
+.email {
+    margin-left: 30px;
+}
+
+label {
+    margin-bottom: 10px;
+}
+
+input {
+    padding: 12px 30px;
+    margin-bottom: 16px;
+}
+
+.login-button {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    background-color: #0077C0;
+    color: #fff;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    margin-top: 30px;
+}

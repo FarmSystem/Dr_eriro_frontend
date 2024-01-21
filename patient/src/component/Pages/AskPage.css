@@ -1,0 +1,11 @@
+.square {
+    background: lightgray;
+    margin : 50px;
+}
+.ask {
+    text-align: center;
+}
+
+.ask h2 {
+    text-align: center;
+}

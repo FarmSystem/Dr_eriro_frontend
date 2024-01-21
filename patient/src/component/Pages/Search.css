@@ -1,0 +1,145 @@
+.search img {
+  max-width: 30px;
+  /* 원하는 최대 가로 너비 */
+  max-height: 30px;
+  /* 원하는 최대 세로 높이 */
+  width: auto;
+  /* 가로 크기를 최대 가로 너비에 맞게 조절 */
+  height: auto;
+  /* 세로 크기를 최대 세로 높이에 맞게 조절 */
+  margin-left: 50px;
+}
+
+.search {
+  text-align: center;
+  padding: 20px;
+}
+
+.search p {
+  font-size: 16px;
+  margin-left: 50px;
+}
+
+.search-doctor {
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.map-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: -40px;
+  margin-left: 10px;
+}
+
+.tab-container {
+  display: flex;
+  flex-wrap: wrap;
+  /* 가로로 넘칠 경우 다음 줄로 이동 */
+  gap: 10px;
+  /* 탭 사이 간격 */
+  justify-content: left;
+  /* 탭을 수평으로 가운데 정렬 */
+  margin-top: 20px;
+}
+
+.tab {
+  padding: 10px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+}
+
+.tab.active {
+  background-color: #3498db;
+  color: white;
+}
+
+.symptom-container {
+  display: flex;
+  flex-wrap: wrap;
+  /* 가로로 넘칠 경우 다음 줄로 이동 */
+  gap: 10px;
+  /* 탭 사이 간격 */
+  justify-content: left;
+  /* 탭을 수평으로 가운데 정렬 */
+  margin-top: 20px;
+}
+
+.symptom-tab {
+  padding: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+}
+
+.doctor-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  /* 한 개의 열로 세로로 배열 */
+}
+
+.doctor-card {
+  border: 1px solid #ccc;
+  /* 사각형 테두리 스타일 */
+  padding: 10px;
+  /* 각 예약 내역의 패딩 */
+  margin: 10px;
+  /* 각 예약 내역의 아래 여백 */
+  display: flex;
+  /* 아이템을 가로로 배치 */
+}
+
+.doctor-card img {
+  max-width: 200px;
+  /* 원하는 최대 가로 너비 */
+  max-height: 200px;
+  /* 원하는 최대 세로 높이 */
+  width: auto;
+  /* 가로 크기를 최대 가로 너비에 맞게 조절 */
+  height: auto;
+  /* 세로 크기를 최대 세로 높이에 맞게 조절 */
+}
+
+.info-container {
+  flex: 1;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* 부모 요소에 꽉 차게 하기 */
+}
+
+.doctor-info {
+  font-size: large;
+  display: flex;
+  align-items: baseline;
+  /* 기준선에 따라 정렬 (의사 이름과 병원 이름을 기준선에 맞춤) */
+}
+
+.hospital-name {
+  margin-left: 30px;
+    color: #555; /* 병원 이름 색상 */
+    font-size: 20px;
+}
+
+.appointment-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 5px; /* 주소와 의사 정보 사이의 여백 조절 */
+  width: 100%; /* 부모 요소에 꽉 차게 하기 */
+}
+
+.address {
+  font-weight: bold;
+  margin-bottom: 5px;
+  /* 주소와 진료과목 사이 여백 추가 */
+}
+
+.specialty {
+  color: #333;
+}
