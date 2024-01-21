@@ -7,7 +7,7 @@ import React, {
 } from "react";
 import Home from "./pages/Home";
 import "./App.css";
-
+import Login from "./pages/Login";
 const reducer = (state, action) => {
   switch (action.type) {
     case "INIT": {
@@ -83,7 +83,8 @@ function App() {
   return (
     <PatientStateContext.Provider value={data}>
       <div className="App">
-        <Home />
+        <Login />
+        {/* <Home /> */}
       </div>
     </PatientStateContext.Provider>
   );

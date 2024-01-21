@@ -35,7 +35,7 @@ const Home = () => {
     <div className="container">
       <div>
         <nav className="sidebar">
-          <h1>Dr.이리로</h1>
+          <h2>Dr.이리로</h2>
           <ul>
             <li>홈페이지</li>
             <li onClick={() => handleProfile("환자관리")}>환자 관리</li>
