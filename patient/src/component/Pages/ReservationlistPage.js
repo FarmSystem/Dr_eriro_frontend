@@ -16,18 +16,11 @@ const ReservationlistPage = () => {
     // 예시 데이터를 사용
     const exampleData = [
       {
-        doctorName: 'Dr. Smith',
-        hospitalName: 'City Hospital',
-        appointmentDate: '2022-01-01',
+        doctorName: '김민수의사',
+        hospitalName: '편안한 메디컬 센터',
+        appointmentDate: '2024-01-23',
         medicalSubject: 'Cardiology',
         doctorImage: '/doctor1.jpeg',
-      },
-      {
-        doctorName: 'Dr. Johnson',
-        hospitalName: 'Community Clinic',
-        appointmentDate: '2022-02-15',
-        medicalSubject: 'Dermatology',
-        doctorImage: '/doctor2.jpeg',
       },
       // ... 다른 예시 데이터
     ];

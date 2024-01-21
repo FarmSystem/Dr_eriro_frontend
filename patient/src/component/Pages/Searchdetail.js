@@ -15,13 +15,13 @@ function Searchdetail() {
                 <img src='/doctor1.jpeg' alt="이미지 설명" />
                 <div className="box-container">
                     <div className="doctorinfo">
-                        <h3>000의사</h3>
-                        <span className="hospitalname">00병원</span>
+                        <h3>김민수의사</h3>
+                        <span className="hospitalname">편안한 메디컬 센터</span>
                     </div>
                     <div className="appointmentinfo">
-                        <span className="address">서울특별시 15개구 </span>
+                        <span className="address">서울특별시 4개구 </span>
                         <br></br>
-                        <span className="subject">진료 과목 : 가정의학과</span>
+                        <span className="subject">진료 과목 : 내과</span>
                     </div>
                 </div>
 
@@ -40,7 +40,7 @@ function Searchdetail() {
             <div className='mini'>
                 <div className='minibox'>
                     <h3>왕진가능지역</h3>
-                    <p>서울특별시 : 중구, 명동</p>
+                    <p>서울특별시 : 중구, 명동, 을지로, 충무로</p>
                 </div>
                 <div className='minibox'>
                     <h3>비용 안내</h3>

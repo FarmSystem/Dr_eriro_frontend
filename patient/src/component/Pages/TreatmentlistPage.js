@@ -16,27 +16,26 @@ const TreatmentlistPage = () => {
     // 예시 데이터를 사용
     const exampleData = [
       {
-        doctorName: 'Dr. Smith',
-        hospitalName: 'City Hospital',
-        appointmentDate: '2022-01-01',
-        medicalSubject: 'Cardiology',
+        doctorName: '박준서의사',
+        hospitalName: '블루하트 치료의원',
+        appointmentDate: '2024-01-01',
+        medicalSubject: '이비인후과',
         doctorImage: '/doctor1.jpeg',
       },
       {
-        doctorName: 'Dr. Johnson',
-        hospitalName: 'Community Clinic',
-        appointmentDate: '2022-02-15',
-        medicalSubject: 'Dermatology',
+        doctorName: '김민주의사',
+        hospitalName: '그린힐즈 의원',
+        appointmentDate: '2023-02-15',
+        medicalSubject: '안과',
         doctorImage: '/doctor2.jpeg',
       },
       {
-        doctorName: 'Dr. Johnson',
-        hospitalName: 'Community Clinic',
-        appointmentDate: '2022-02-15',
-        medicalSubject: 'Dermatology',
+        doctorName: '김민주의사',
+        hospitalName: '그린힐즈 의원',
+        appointmentDate: '2022-09-23',
+        medicalSubject: '안과',
         doctorImage: '/doctor2.jpeg',
       },
-      // ... 다른 예시 데이터
     ];
 
     setTreatments(exampleData);

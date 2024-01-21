@@ -6,10 +6,10 @@ function ReservationPage() {
     const [postalCode, setPostalCode] = useState("");
     const [address, setAddress] = useState("");
     const [detailAddress, setDetailAddress] = useState("");
-    const navigate = useNavigate(); // useNavigate 훅 사용
+    const navigate = useNavigate(); 
 
     const handleSearch = () => {
-        // 검색 아이콘 클릭 시 다음 페이지로 이동
+
         navigate('/reservation/search'); 
     };
 
@@ -31,9 +31,10 @@ function ReservationPage() {
             <div className="input-container">
                 <div className="icon">🏠</div>
                 <div className="input-content">
-                    <div className="text">주소</div>
+                    <div className="text">주소입력</div>
                     <input
                         type="text"
+                        className="special"
                         value={address}
                         onChange={(e) => setAddress(e.target.value)}
                         placeholder="주소를 입력하세요"
@@ -56,7 +57,7 @@ function ReservationPage() {
                 <div className="icon">🔍</div>
             </button>
 
-            <div className="iconimg">
+            {/* <div className="iconimg">
                 <div className="icon-wrapper">
                     <img src='./house_icon.png' alt="이미지 설명" />
                     <p>우리집</p>
@@ -65,7 +66,7 @@ function ReservationPage() {
                     <img src='./map_icon.png' alt="이미지 설명" />
                     <p>기타</p>
                 </div>
-            </div>
+            </div> */}
 
         </div>
     );

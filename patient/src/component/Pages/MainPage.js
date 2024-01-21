@@ -9,8 +9,13 @@ function Main() {
     navigate('/reservation'); 
   };
 
+  const ToOtherPage = () => {
+    navigate('/login'); 
+  };
+
   return (
     <div className="home">
+      <button className='login-button' onClick={ToOtherPage}>로그인하기</button><br />
       <button className='reservation-button' onClick={redirectToOtherPage}>신청하기</button>
       <div className="img-container">
         <img src='./home1.png' alt="이미지 설명" />

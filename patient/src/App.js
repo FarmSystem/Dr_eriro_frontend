@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'; 
 import AskPage from './component/Pages/AskPage';
 import ReservationPage from './component/Pages/ReservationPage';
 import Search from './component/Pages/Search';
@@ -15,23 +15,22 @@ import Review from './component/Pages/Review';
 import Login from './component/Pages/Login';
 
 const titleStyle = {
-  textDecoration: 'none', // 밑줄 없애기
+  textDecoration: 'none',
   fontWeight: 'bold',
-  color: '#0077C0', // 텍스트 색상을 원하는 색으로 설정
+  color: '#0077C0',
   fontSize: '40px',
 };
 
 const linkStyle = {
-  textDecoration: 'none', // 밑줄 없애기
+  textDecoration: 'none',
   fontWeight: 'bold',
-  color: 'black', // 텍스트 색상을 원하는 색으로 설정
+  color: 'black',
   fontSize: '20px',
 };
 
 function App() {
-
   return (
-    <Router>
+    <BrowserRouter> 
       <div className="App">
         <div className="menubar">
           <nav>
@@ -41,10 +40,8 @@ function App() {
               <Link to="/ask" style={linkStyle}>자주묻는 질문</Link><br /><br />
               <Link to="/reservationlist" style={linkStyle}>예약 내역</Link><br /><br />
               <Link to="/treatmentlist" style={linkStyle}>진료 내역</Link>
-              <button className='reservation-button'>로그인하기</button>
             </ul>
           </nav>
-
         </div>
         <div className="content">
           <Routes>
@@ -63,7 +60,7 @@ function App() {
           </Routes>
         </div>
       </div>
-    </Router>
+    </BrowserRouter>
   );
 }
 

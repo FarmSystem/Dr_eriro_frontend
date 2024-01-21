@@ -20,7 +20,7 @@ const Login = () => {
 
         if (isLoggedIn) {
             alert('로그인 성공!');
-            navigate('/next-page'); // 로그인 후 이동할 페이지 경로 적으면 될 듯 !
+            navigate('/reservation'); // 로그인 후 이동할 페이지 경로 적으면 될 듯 !
         } else {
             alert('로그인 실패. 다시 시도해주세요.');
         }
@@ -52,7 +52,7 @@ const Login = () => {
                     />
                 </label>
                 <br />
-                <button type="submit" className="login-button">로그인</button>
+                <button type="submit" className="loginbutton">로그인</button>
             </form>
         </div>
     );
