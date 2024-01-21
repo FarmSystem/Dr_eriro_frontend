@@ -78,6 +78,11 @@
   background-color: #f0f0f0;
 }
 
+.symptom-tab.active {
+  background-color: #0077C0;
+  color: white;
+}
+
 .doctor-list {
   display: grid;
   grid-template-columns: 1fr;
@@ -143,4 +148,8 @@
 
 .specialty {
   color: #333;
+}
+
+.search-doctor h1 {
+  margin-left: 13px;
 }

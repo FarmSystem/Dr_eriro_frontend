@@ -16,24 +16,32 @@ const specialties = {
   orthopedics: '정형외과',
   ophthalmology: '안과',
   pediatrics: '소아과',
-  rehabilitationMedicine: '재활의학과',
+  familyMedicine: '가정의학과',
 };
+
+const symptoms = {
+  head: '머리가 아파요',
+  orthopedics_: '다리가 아파요',
+  abdomen: '배가 아파요',
+  fever: '열이 나요',
+  runnyNose: '콧물이 나와요',
+  upsetStomach: '속이 안 좋아요',
+  cough: '기침이 나와요',
+};
+
 
 const doctorsData = {
   internalMedicine: [
     { name: '김민수의사', hospital: '편안한 메디컬 센터', address: '서울특별시 4개구', specialty: '진료과목 : 내과' },
     { name: '송지원의사', hospital: '그린힐즈 의원', address: '서울특별시 5개구', specialty: '진료과목 : 내과' },
     { name: '손영진의사', hospital: '좋은건강병원', address: '서울특별시 3개구', specialty: '진료과목 : 내과' },
-    // 내과 의사들의 데이터 추가
   ],
   obstetricsAndGynecology: [
     { name: '박성민의사', hospital: '현대 건강의원', address: '서울특별시 3개구', specialty: '진료과목 : 산부인과' },
     { name: '김지영의사', hospital: '서울 헬스케어 센터', address: '서울특별시 5개구', specialty: '진료과목 : 산부인과' },
     { name: '이지현의사', hospital: '편안한 치료의원', address: '서울특별시 7개구', specialty: '진료과목 : 산부인과' },
-    // 산부인과 의사들의 데이터 추가
   ],
   otolaryngology: [
-    // 이비인후과 의사들의 데이터 추가
     { name: '박준서의사', hospital: '블루하트 치료의원', address: '서울특별시 2개구', specialty: '진료과목 : 이비인후과' },
     { name: '정서영의사', hospital: '좋은건강병원', address: '서울특별시 15개구', specialty: '진료과목 : 이비인후과' },
     { name: '이현우의사', hospital: '편안한 메디컬 센터', address: '서울특별시 10개구', specialty: '진료과목 : 이비인후과' },
@@ -53,20 +61,68 @@ const doctorsData = {
     { name: '정민재의사', hospital: '힐링메디컬클리닉', address: '서울특별시 3개구', specialty: '진료과목 : 소아과' },
     { name: '윤도윤의사', hospital: '좋은건강병원', address: '서울특별시 2개구', specialty: '진료과목 : 소아과' },
   ],
-  rehabilitationMedicine: [
-    { name: '임서현의사', hospital: '편안한 메디컬 센터', address: '서울특별시 6개구', specialty: '진료과목 : 재활의학과' },
-    { name: '이태영의사', hospital: '현대 건강의원', address: '서울특별시 10개구', specialty: '진료과목 : 재활의학과' },
-    { name: '김민수의사', hospital: '그린블루 의원', address: '서울특별시 15개구', specialty: '진료과목 : 재활의학과' },
+  familyMedicine: [
+    { name: '임서현의사', hospital: '편안한 메디컬 센터', address: '서울특별시 6개구', specialty: '진료과목 : 가정의학과' },
+    { name: '이태영의사', hospital: '현대 건강의원', address: '서울특별시 10개구', specialty: '진료과목 : 가정의학과' },
+    { name: '김민수의사', hospital: '그린블루 의원', address: '서울특별시 15개구', specialty: '진료과목 : 가정의학과' },
   ],
 };
 
+const doctorsdata = {
+  head: [
+    { name: '김민수의사', hospital: '편안한 메디컬 센터', address: '서울특별시 4개구', specialty: '진료과목 : 내과' },
+    { name: '송지원의사', hospital: '그린힐즈 의원', address: '서울특별시 5개구', specialty: '진료과목 : 내과' },
+    { name: '손영진의사', hospital: '좋은건강병원', address: '서울특별시 3개구', specialty: '진료과목 : 내과' },
+  ],
+  orthopedics_: [
+    { name: '박성민의사', hospital: '현대 건강의원', address: '서울특별시 3개구', specialty: '진료과목 : 정형외과' },
+    { name: '김지영의사', hospital: '서울 헬스케어 센터', address: '서울특별시 5개구', specialty: '진료과목 : 정형외과' },
+    { name: '이지현의사', hospital: '편안한 치료의원', address: '서울특별시 7개구', specialty: '진료과목 : 정형외과' },
+  ],
+  abdomen: [
+    { name: '박준서의사', hospital: '블루하트 치료의원', address: '서울특별시 2개구', specialty: '진료과목 : 내과' },
+    { name: '정서영의사', hospital: '좋은건강병원', address: '서울특별시 15개구', specialty: '진료과목 : 내과' },
+    { name: '이현우의사', hospital: '편안한 메디컬 센터', address: '서울특별시 10개구', specialty: '진료과목 : 내과' },
+  ],
+  fever: [
+    { name: '윤지민의사', hospital: '좋은건강병원', address: '서울특별시 7개구', specialty: '진료과목 : 내과' },
+    { name: '이지영의사', hospital: '편안한 메디컬 센터', address: '서울특별시 15개구', specialty: '진료과목 : 내과' },
+    { name: '강승우의사', hospital: '현대 건강의원', address: '서울특별시 1개구', specialty: '진료과목 : 내과' },
+  ],
+  runnyNose: [
+    { name: '임현우의사', hospital: '블루하트 치료의원', address: '서울특별시 15개구', specialty: '진료과목 : 이비인후과' },
+    { name: '최재호의사', hospital: '편안한 메디컬 센터', address: '서울특별시 6개구', specialty: '진료과목 : 이비인후과' },
+    { name: '김민주의사', hospital: '그린힐즈 의원', address: '서울특별시 11개구', specialty: '진료과목 : 이비인후과' },
+  ],
+  upsetStomach: [
+    { name: '이태영의사', hospital: '편안한 메디컬 센터', address: '서울특별시 12개구', specialty: '진료과목 : 내과' },
+    { name: '정민재의사', hospital: '힐링메디컬클리닉', address: '서울특별시 3개구', specialty: '진료과목 : 내과' },
+    { name: '윤도윤의사', hospital: '좋은건강병원', address: '서울특별시 2개구', specialty: '진료과목 : 내과' },
+  ],
+  cough: [
+    { name: '임서현의사', hospital: '편안한 메디컬 센터', address: '서울특별시 6개구', specialty: '진료과목 : 이비인후과' },
+    { name: '이태영의사', hospital: '현대 건강의원', address: '서울특별시 10개구', specialty: '진료과목 : 이비인후과' },
+    { name: '김민수의사', hospital: '그린블루 의원', address: '서울특별시 15개구', specialty: '진료과목 : 이비인후과' },
+  ],
+};
+
+
+
 function Search() {
-  const [selectedTab, setSelectedTab] = useState('internalMedicine');
-  const [doctorsList, setDoctorsList] = useState(doctorsData[selectedTab]);
+  const [selectedTab, setSelectedTab] = useState(null);
+  const [selectedSymptom, setSelectedSymptom] = useState(null);
+  const [doctorsList, setDoctorsList] = useState([]);
 
   const handleTabChange = (tab) => {
     setSelectedTab(tab);
-    setDoctorsList(doctorsData[tab]);
+    setSelectedSymptom(null);
+    setDoctorsList(doctorsData[tab] || []);
+  };
+
+  const handleSymptomChange = (symptom) => {
+    setSelectedSymptom(symptom);
+    setSelectedTab(null);
+    setDoctorsList(doctorsdata[symptom] || []);
   };
 
   return (
@@ -95,13 +151,15 @@ function Search() {
         {/* 증상 선택 */}
         <div className='symptom-container'>
           <h2>증상</h2>
-          <div className='symptom-tab'>머리가 아파요</div>
-          <div className='symptom-tab'>다리가 아파요</div>
-          <div className='symptom-tab'>배가 아파요</div>
-          <div className='symptom-tab'>열이 나요</div>
-          <div className='symptom-tab'>두드러기가 났어요</div>
-          <div className='symptom-tab'>속이 안 좋아요</div>
-          <div className='symptom-tab'>기침이 나와요</div>
+          {Object.keys(symptoms).map((symptom) => (
+            <div
+              key={symptom}
+              className={`symptom-tab ${selectedSymptom === symptom ? 'active' : ''}`}
+              onClick={() => handleSymptomChange(symptom)}
+            >
+              {symptoms[symptom]}
+            </div>
+          ))}
         </div>
         <br /><br /><hr></hr>
       </div>

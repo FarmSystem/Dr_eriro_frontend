@@ -10,7 +10,7 @@ const Treatmentlistdetail = () => {
   });
 
   const [medicalInfo, setMedicalInfo] = useState({
-    symptoms: '코가 막혔어요',
+    symptoms: '콧물이 나와요',
     patientType: '초진',
   });
 
@@ -30,7 +30,7 @@ const Treatmentlistdetail = () => {
         appointmentDate: '2024-01-01',
       });
       setMedicalInfo({
-        symptoms: '코가 막혔어요',
+        symptoms: '콧물이 나와요',
         patientType: '초진',
       });
       setPaymentInfo({

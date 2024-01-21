@@ -8,7 +8,12 @@ function Searchdetail() {
 
   const redirectToOtherPage = () => {
     navigate('/apply'); 
+    scrollUp();
   };
+
+  const scrollUp = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
     return (
         <div className='home'>
             <div className='box'>
