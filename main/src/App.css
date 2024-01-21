@@ -1,11 +1,25 @@
 .App {
   width: 1300px;
   height: 900px;
+  font-family: "EASTARJET-Medium";
 }
-
+@font-face {
+  font-family: "EASTARJET-Medium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/EASTARJET-Medium.woff2")
+    format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TAEBAEKfont";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/TAEBAEKfont.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
 .container {
   display: flex;
-  width: 100%;
+  width: 120%;
   height: 100%; /* 화면 높이에 맞게 설정 */
   background-color: "White";
 }
@@ -69,20 +83,25 @@
 }
 
 .patient-list {
+  font-family: "EASTARJET-Medium";
   padding: 10px;
   width: 220px;
 }
 
 .patient-posts {
-  border: solid 1px #000000;
+  transition: border-color 0.5s ease; /* 테두리 색이 변할 때 0.5초 동안 서서히 변경 */
+  cursor: pointer; /* 마우스 커서를 손가락 형태로 변경 */
+  border: solid 1px #ccc; /* 초기 테두리 색 설정 */
   border-radius: 10px;
   margin-top: 20px;
 }
-
+.patient-posts.selected {
+  border-color: #466bdc; /* 클릭한 경우 테두리 색을 파란색으로 변경 */
+}
 .patient-posts header {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #000000; /* info와 details 선으로 구분 */
+  border-bottom: 1px solid #ccc; /* info와 details 선으로 구분 */
   margin-bottom: 10px;
   padding-bottom: 5px;
   background-color: #d5efff;
@@ -96,9 +115,6 @@
 }
 
 /* details 스타일 */
-.patient-posts .details {
-  color: #333;
-}
 
 .detail {
   color: #666;
@@ -114,10 +130,12 @@
   flex: 1;
 }
 .patient-detail-info {
+  font-family: "EASTARJET-Medium";
   flex: 1;
   border: #000000 solid;
   margin: 10px;
   border-radius: 5px;
+  height: 100%;
 }
 /* CSS 파일 (예: styles.css) */
 
@@ -166,7 +184,7 @@
 }
 
 .pastrecord {
-  height: 100%;
+  height: 25%;
 }
 .patientreason-distance {
   height: 15%;
@@ -182,9 +200,7 @@
 .patientreason {
   height: 15%;
 }
-.patientmoney {
-  height: 15%;
-}
+
 .calendar {
   margin: 10px;
 }
@@ -205,22 +221,12 @@
   height: 40px;
 }
 
-.patientmoney div {
-  height: 50%;
-  width: 80%;
-  margin: 0 auto;
-  background-color: #cdcdcd;
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  font-weight: bold;
-}
 .pastrecord div {
-  height: 50%;
   width: 80%;
   text-align: center;
-  margin: 0 auto;
-  background-color: #cdcdcd;
+  margin: 0px auto;
+  padding: 40px 10px;
+  background-color: #f4f4f6;
   border-radius: 10px;
 }
 
@@ -271,8 +277,7 @@
   font-weight: bold;
 }
 .firstleft img {
-  width: 40%;
-  background-color: #efeeee;
+  width: 70%;
   margin-left: 10px;
   border-radius: 5px;
 }
@@ -324,4 +329,241 @@
   margin-left: 20px;
   font-size: 18px;
   margin-bottom: 20px;
+}
+
+.Patientdetails {
+  display: flex;
+  height: 102%;
+}
+.patientdetails-top {
+  height: 80%;
+  display: flex;
+  margin-bottom: 100px;
+}
+.main-detail {
+  height: 98%;
+}
+.patientdetails-info {
+  height: 35%;
+  background-color: #f4f4f6;
+  margin: 10px;
+  border-radius: 10px;
+}
+.patientdetails-reco {
+  display: flex;
+  height: 62%;
+  background-color: #f4f4f6;
+  margin: 10px;
+  border-radius: 10px;
+}
+.patientdetails-left {
+  width: 60%;
+}
+.patientdetails-reco-list1 {
+  background-color: #ffffff;
+  border: #466bdc solid 1px;
+  border-radius: 5px;
+  height: 50px;
+  margin: 10px;
+  margin-right: 10px;
+  padding: 2px 10px;
+  color: #466bdc;
+}
+
+.patientdetails-reco-listn {
+  background-color: #ffffff;
+  border: #666666 solid 1px;
+  border-radius: 5px;
+  height: 50px;
+  margin: 10px;
+  margin-right: 10px;
+  padding: 2px 10px;
+
+  transition: border-color 0.5s ease; /* 테두리 색이 변할 때 0.5초 동안 서서히 변경 */
+  cursor: pointer; /* 마우스 커서를 손가락 형태로 변경 */
+  border: solid 1px #ccc; /* 초기 테두리 색 설정 */
+}
+.patientdetails-reco-listn.selected {
+  border-color: #466bdc; /* 클릭한 경우 테두리 색을 파란색으로 변경 */
+}
+
+.patientdetails-reco-detail {
+  background-color: #ffffff;
+  width: 65%;
+  margin: 10px;
+  border: #466bdc solid 1px;
+  border-radius: 5px;
+}
+.patientdetails-reco-detail-head {
+  background-color: #f7f8fc;
+  color: #466bdc;
+  padding: 5px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+.patientdetails-reco-detail-body-head {
+  margin: 5px;
+  font-weight: bold;
+}
+.patientdetails-reco-detail-body-body {
+  border: #666666 solid 1px;
+  margin: 0 10px;
+  border-radius: 5px;
+  padding: 5px;
+  color: #666666;
+}
+
+.patientdetails-reco-detail-body-cash {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 5px;
+  margin-top: 10px;
+}
+
+.patientdetails-reco-detail-body-paymoney {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+  padding-top: 5px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+}
+
+.patientdetails-name {
+  margin: 5px;
+  font-weight: bold;
+}
+.pateinetdetails-spec {
+  margin: 10px;
+}
+
+.patientdetails-right {
+  background-color: #f4f4f6;
+  margin: 10px;
+  border-radius: 5px;
+  width: 50%;
+  border: #666 solid 1px;
+}
+.patientdetails-right-head1 {
+  margin: 3px 0px;
+  border-bottom: #666666 solid 1px;
+  padding: 3px 5px;
+  font-weight: bold;
+}
+.patientdetails-right-head {
+  background-color: #ffffff;
+  margin: 3px 0px;
+  border-bottom: #666666 solid 1px;
+  padding: 3px 5px;
+  font-weight: bold;
+}
+.symptoms {
+  background-color: #ffffff;
+  height: 93%;
+  border-radius: 5px;
+}
+.symptoms textarea {
+  width: 400px;
+  margin-left: 30px;
+  height: 150px;
+}
+.patientdetails-bottom {
+  margin: auto;
+  padding: 10px 30px;
+}
+.patientdetails-bottom button {
+  margin: auto;
+  padding: 20px 100px;
+}
+
+.Patientdetails header {
+  margin: 5px;
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 20px;
+}
+.paymentbut button {
+  background-color: #ffffff;
+  padding: 10px;
+  margin: 0px 20px;
+}
+.paymentbut2 button {
+  background-color: #ffffff;
+  padding: 10px;
+  margin: 0px 10px;
+}
+
+.pastrecord span {
+  display: block;
+  margin-top: 20px;
+}
+.pastrecord12 h4 {
+  margin-left: 20px;
+}
+.pastrecord12 {
+  height: 50%;
+}
+.patientmoney {
+  height: 15%;
+}
+.patientmoney div {
+  width: 90%;
+  height: 50%;
+  margin: 10px auto;
+  padding-top: 30px;
+  background-color: #f4f4f6;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  color: #ccc;
+}
+.audiiod {
+  margin-top: 40px;
+}
+
+.patient-list-button {
+}
+
+.paymentbut button {
+  transition: all 0.3s ease;
+}
+
+.paymentbut button:hover {
+  box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9,
+    7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001;
+}
+.paymentbut2 button {
+  transition: all 0.3s ease;
+}
+
+.paymentbut2 button:hover {
+  box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9,
+    7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001;
+}
+
+.patient-list-button {
+  transition: all 0.3s ease;
+  margin-left: 5px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 5px;
+}
+.patient-list-button:hover {
+  box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9,
+    7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001;
+}
+.patient-list-button.active {
+  color: #4694dc; /* 활성화된 버튼의 글자 색상 변경 */
+  text-decoration: underline; /* 활성화된 버튼에 밑줄 추가 */
+}
+
+.confbu {
+  background-color: #4694dc;
+  color: #ffffff;
+  border: none;
+  border-radius: 3px;
+}
+.confbu2 {
+  background-color: #ffffff;
+  border: #ccc solid 1px;
 }

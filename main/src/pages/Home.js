@@ -3,14 +3,16 @@ import Navbar from "../components/NavbarC";
 import Patient from "../components/PatientC";
 import { PatientStateContext } from "../App";
 import Patientdetails from "../components/Patientdetail";
-
+import doctorimg from "./doctor.jpeg";
 const Home = () => {
   const patientlist = useContext(PatientStateContext);
   const [filteredPatients, setFilteredPatients] = useState(patientlist);
   const [selectedPatient, setSelectedPatient] = useState(null);
   const [isProfileVisible, setIsProfileVisible] = useState(false);
+  const [activeButton, setActiveButton] = useState("w");
 
   const handleButtonClick = (state) => {
+    setActiveButton(state);
     const filteredData = patientlist.filter(
       (patient) => patient.patientstate === state
     );
@@ -48,7 +50,7 @@ const Home = () => {
             <div className="firstinfo">
               <div className="firstleft">
                 <div>프로필 사진</div>
-                <img src="./doctor.jpeg" alt="의사사진" />
+                <img src={doctorimg} alt="의사사진" />
               </div>
               <div className="firstright">
                 <div className="firstright-head">이름</div>
@@ -80,13 +82,28 @@ const Home = () => {
             <div className="patient-listbody">
               <h3>환자 리스트</h3>
               <div className="patient-list">
-                <button onClick={() => handleButtonClick("예약신청")}>
+                <button
+                  className={`patient-list-button ${
+                    activeButton === "w" ? "active" : ""
+                  }`}
+                  onClick={() => handleButtonClick("w")}
+                >
                   예약 신청
                 </button>
-                <button onClick={() => handleButtonClick("예약완료")}>
+                <button
+                  className={`patient-list-button ${
+                    activeButton === "a" ? "active" : ""
+                  }`}
+                  onClick={() => handleButtonClick("a")}
+                >
                   예약 완료
                 </button>
-                <button onClick={() => handleButtonClick("진료완료")}>
+                <button
+                  className={`patient-list-button ${
+                    activeButton === "c" ? "active" : ""
+                  }`}
+                  onClick={() => handleButtonClick("c")}
+                >
                   진료 완료
                 </button>
                 <div>
@@ -105,6 +122,7 @@ const Home = () => {
               <Patientdetails
                 patient={selectedPatient}
                 allpatient={patientlist}
+                onChildClick={handleButtonClick}
               />
             </div>
           </body>

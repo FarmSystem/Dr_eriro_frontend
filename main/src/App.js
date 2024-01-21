@@ -21,96 +21,71 @@ const reducer = (state, action) => {
 export const PatientStateContext = React.createContext();
 function App() {
   const [data, dispatch] = useReducer(reducer, []);
-  const getPaitent = () => {
-    const res = [
-      {
-        patientstate: "예약신청",
-        patientName: "김영찬",
-        gender: "남",
-        age: 25,
-        reservationDate: "2024-01-30T11:00:00",
-        symptoms: "두통",
-        pastrecords: "2023-09-10 - 1차 방문진료",
-        height: 170,
-        weight: 70,
-        Accumulatednumber: 3,
-        distance: "13km",
-        callnumber: "010-1234-5667",
-        birthday: "2000-01-01",
-        payroute: "none",
-        movement: "none",
-      },
-      {
-        patientstate: "예약신청",
-        patientName: "이동호",
-        gender: "남",
-        age: 25,
-        reservationDate: "2024-01-29T11:00:00",
-        symptoms: "두두통",
-        pastrecords: "2023-09-10 - 2차 방문진료",
-        height: 170,
-        weight: 70,
-        Accumulatednumber: 3,
-        distance: "13km",
-        callnumber: "010-1234-5667",
-        birthday: "2000-01-01",
-        payroute: "none",
-      },
-      {
-        patientstate: "예약완료",
-        patientName: "가나다",
-        gender: "남",
-        age: 31,
-        reservationDate: "2024-01-31T11:00:00",
-        symptoms: "복통통",
-        payroute: "전액지원",
-      },
-      {
-        patientstate: "진료완료",
-        patientName: "이지은",
-        gender: "여",
-        age: 30,
-        reservationDate: "2023-10-15T14:30:00",
-        symptoms: "복통",
-      },
-    ];
 
-    const initData = res.map((it) => {
-      return {
-        patientstate: it.patientstate,
-        name: it.patientName,
-        gender: it.gender,
-        age: it.age,
-        date: it.reservationDate,
-        symptoms: it.symptoms,
-        patientName: it.patientName,
-        reservationDate: it.reservationDate,
-        height: it.height,
-        weight: it.weight,
-        Accumulatednumber: it.Accumulatednumbered,
-        distance: it.distance,
-        callnumber: it.callnumber,
-        birthday: it.birthday,
-        pastrecords: it.pastrecords,
-        payroute: it.payroute,
-        movement: it.movement,
-      };
-    });
+  const getExaminationData = async () => {
+    try {
+      const doctorId = 3;
+      const apiUrl = `http://ec2-43-201-133-67.ap-northeast-2.compute.amazonaws.com:8000/api/v1/reservations/patientList/${doctorId}`;
+      const response = await fetch(apiUrl);
 
-    dispatch({ type: "INIT", data: initData });
+      if (response.ok) {
+        const responseData = await response.json();
+        console.log("Examination data:", responseData);
+        return responseData;
+      } else {
+        console.error("Failed to get examination data");
+      }
+    } catch (error) {
+      console.error("Error getting examination data:", error);
+    }
   };
+
   useEffect(() => {
-    getPaitent();
+    const fetchData = async () => {
+      const examinationData = await getExaminationData();
+
+      const initData = examinationData.map((it) => {
+        const reservationDate = new Date(it.reservation_date);
+        const formattedDate = reservationDate.toISOString().split("T")[0];
+        const formattedTime =
+          ("0" + reservationDate.getHours()).slice(-2) +
+          ":" +
+          ("0" + reservationDate.getMinutes()).slice(-2);
+
+        return {
+          patientstate: it.status,
+          name: it.patient.name,
+          gender: it.patient.gender === "F" ? "여" : "남",
+          callnumber: it.patient.number,
+          height: it.patient.height,
+          weight: it.patient.weight,
+          id: it.patient.id,
+          age: it.patient.birth, // 이 부분도 수정이 필요할 것 같습니다. 나이를 계산하는 함수를 사용해야 합니다.
+          distance: "13km",
+          payroute: it.payroute,
+          movement: it.movement,
+          date: formattedDate,
+          time: formattedTime,
+          symptoms: it.visit_for,
+          reservationDate: it.reservation_date,
+          pastrecords: it.pastrecords,
+          pastreco: it.pastreco,
+          payroute: "본인부담",
+          movement: "치매",
+        };
+      });
+
+      dispatch({ type: "INIT", data: initData });
+    };
+    fetchData();
   }, []);
 
   return (
     <PatientStateContext.Provider value={data}>
       <div className="App">
         <Home />
-        <></>
       </div>
     </PatientStateContext.Provider>
   );
 }
-
 export default App;
