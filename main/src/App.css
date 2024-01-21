@@ -1,0 +1,327 @@
+.App {
+  width: 1300px;
+  height: 900px;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  height: 100%; /* 화면 높이에 맞게 설정 */
+  background-color: "White";
+}
+
+.sidebar {
+  width: 250px;
+  height: 100%;
+  background-color: "white";
+  color: "black";
+  display: flex;
+  flex-direction: column;
+  border-right: solid #101010;
+}
+.sidebar h1 {
+  margin-left: 30px;
+  color: #0077c0;
+  font-size: 40px;
+}
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 25px;
+}
+
+.sidebar li {
+  padding: 10px;
+  margin: 20px;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+}
+
+.chart {
+  flex: 1; /* 나머지 공간을 차지하도록 설정 */
+  background-color: #ffffff;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.patient-listbody {
+  border-right: #666 1px solid;
+  margin-top: -6px;
+}
+
+.chartheader {
+  background-color: #d5efff;
+  padding: 20px;
+  margin: -10px;
+  margin-bottom: 5px;
+  height: 30px;
+  border-bottom: #666 1px solid;
+}
+.chartheader span {
+  margin-right: 20px;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.patient-list {
+  padding: 10px;
+  width: 220px;
+}
+
+.patient-posts {
+  border: solid 1px #000000;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.patient-posts header {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #000000; /* info와 details 선으로 구분 */
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  background-color: #d5efff;
+  border-radius: 10px 10px 0px 0px;
+}
+.patient-posts .patient-info header span {
+  font-size: 20px;
+  margin-right: 20px;
+  padding-left: 10px;
+  margin-top: 5px;
+}
+
+/* details 스타일 */
+.patient-posts .details {
+  color: #333;
+}
+
+.detail {
+  color: #666;
+  padding-left: 10px;
+}
+.detail span {
+  font-weight: bold;
+  color: black;
+}
+
+.chart body {
+  display: flex;
+  flex: 1;
+}
+.patient-detail-info {
+  flex: 1;
+  border: #000000 solid;
+  margin: 10px;
+  border-radius: 5px;
+}
+/* CSS 파일 (예: styles.css) */
+
+.patientdetailsheader {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 10px;
+  border-bottom: solid #000000;
+}
+
+.patientdetailsheader span:first-child {
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+.patientdetailsheader span:nth-child(2) {
+  font-size: 15px;
+  color: gray;
+}
+.patientdetailsheader span:nth-child(3) {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0px 20px;
+}
+
+.patientdetailsbody {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+}
+
+.patientbodyfirstdiv {
+  width: 70%;
+  border-right: solid #000000;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.Patientdetails {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.pastrecord {
+  height: 100%;
+}
+.patientreason-distance {
+  height: 15%;
+  display: flex;
+}
+.patientreason-distance p {
+  margin-left: 10px;
+}
+.patientreason-distance div {
+  width: 47%;
+  margin-left: 3%;
+}
+.patientreason {
+  height: 15%;
+}
+.patientmoney {
+  height: 15%;
+}
+.calendar {
+  margin: 10px;
+}
+.calendar-container {
+  display: flex;
+  justify-content: center;
+}
+
+.confirm-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex: 1;
+}
+.confirm-button button {
+  margin: 0 auto;
+  width: 50%;
+  height: 40px;
+}
+
+.patientmoney div {
+  height: 50%;
+  width: 80%;
+  margin: 0 auto;
+  background-color: #cdcdcd;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+}
+.pastrecord div {
+  height: 50%;
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+  background-color: #cdcdcd;
+  border-radius: 10px;
+}
+
+.patientdetailsbody h4 {
+  margin: 10px;
+}
+
+.patientbodyseconddiv {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.patientside {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.patientside div {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  margin: 5px;
+}
+
+.profile {
+  width: 100%;
+}
+.flexbox {
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+}
+.firstinfo {
+  height: 45%;
+  display: flex;
+}
+.firstleft {
+  width: 30%;
+}
+.firstright {
+  width: 50%;
+}
+.firstleft div {
+  font-size: 20px;
+  margin-left: 10px;
+  font-weight: bold;
+}
+.firstleft img {
+  width: 40%;
+  background-color: #efeeee;
+  margin-left: 10px;
+  border-radius: 5px;
+}
+
+.firstright {
+  display: flex;
+  flex-direction: column;
+}
+.firstright-head {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.firstright-body {
+  background-color: #efeeee;
+  display: flex;
+  height: 15%;
+  width: 80%;
+  border-radius: 5px;
+  line-height: 50px;
+  padding-left: 20px;
+  margin-left: 20px;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.footinfo {
+  height: 45%;
+}
+
+.footinfo {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+.footinfo-head {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+.footinfo-body {
+  background-color: #efeeee;
+  display: flex;
+  height: 15%;
+  width: 87%;
+  border-radius: 5px;
+  line-height: 50px;
+  padding-left: 20px;
+  margin-left: 20px;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
