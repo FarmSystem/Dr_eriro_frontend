@@ -1,0 +1,40 @@
+.review-container {
+  padding: 10px;
+  margin-bottom: 40px;
+  display: flex;
+}
+
+.review-container img {
+  margin-left: 420px;
+  margin-right: 40px;
+  max-width: 200px;
+  max-height: 200px;
+  width: auto;
+  height: auto;
+}
+
+.review-box-container {
+  flex: 1;
+  margin-left: 10px;
+}
+
+
+.review-text-container {
+  text-align: center;
+}
+
+.review-button {
+  text-align: center;
+  padding-left: 28px;
+  padding-right: 28px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #C7EEFF;
+  color: black;
+  font-weight: bold;
+  font-size: 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}

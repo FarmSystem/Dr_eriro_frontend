@@ -1,16 +1,16 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom'; 
+import { useNavigate } from 'react-router-dom';
 import './MainPage.css';
 
 function Main() {
-  const navigate = useNavigate(); // useNavigate 훅 사용
+  const navigate = useNavigate();
 
   const redirectToOtherPage = () => {
-    navigate('/reservation'); 
+    navigate('/reservation');
   };
 
   const ToOtherPage = () => {
-    navigate('/login'); 
+    navigate('/login');
   };
 
   return (

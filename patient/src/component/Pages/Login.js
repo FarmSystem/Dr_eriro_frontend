@@ -31,15 +31,15 @@ const Login = () => {
             <h1>로그인</h1>
             <form onSubmit={handleSubmit}>
                 <div className='email'>
-                <label>
-                    Email:
-                    <input
-                        type="email"
-                        name="email"
-                        value={email}
-                        onChange={handleChange}
-                    />
-                </label>
+                    <label>
+                        Email:
+                        <input
+                            type="email"
+                            name="email"
+                            value={email}
+                            onChange={handleChange}
+                        />
+                    </label>
                 </div>
                 <br />
                 <label>

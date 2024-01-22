@@ -134,7 +134,6 @@ function Search() {
           <p>서울특별시 중구 필동로 1길 30</p>
         </div>
 
-        {/* 탭 선택 */}
         <div className='tab-container'>
           <h2>진료 과목</h2>
           {Object.keys(specialties).map((tab) => (
@@ -147,8 +146,6 @@ function Search() {
             </div>
           ))}
         </div>
-
-        {/* 증상 선택 */}
         <div className='symptom-container'>
           <h2>증상</h2>
           {Object.keys(symptoms).map((symptom) => (

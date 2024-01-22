@@ -6,11 +6,11 @@ function ReservationPage() {
     const [postalCode, setPostalCode] = useState("");
     const [address, setAddress] = useState("");
     const [detailAddress, setDetailAddress] = useState("");
-    const navigate = useNavigate(); 
+    const navigate = useNavigate();
 
     const handleSearch = () => {
 
-        navigate('/reservation/search'); 
+        navigate('/reservation/search');
     };
 
     return (

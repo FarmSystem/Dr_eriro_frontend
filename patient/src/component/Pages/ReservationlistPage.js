@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import './ReservationlistPage.css'; // 스타일 파일을 불러옵니다.
+import './ReservationlistPage.css';
 
 const linkStyle = {
-  textDecoration: 'none', // 밑줄 없애기
+  textDecoration: 'none',
   fontWeight: 'bold',
-  color: 'black', // 텍스트 색상을 원하는 색으로 설정
+  color: 'black',
   fontSize: '35px',
 };
 
@@ -13,7 +13,7 @@ const ReservationlistPage = () => {
   const [reservations, setReservations] = useState([]);
 
   useEffect(() => {
-    // 예시 데이터를 사용
+
     const exampleData = [
       {
         doctorName: '김민수의사',
@@ -22,7 +22,6 @@ const ReservationlistPage = () => {
         medicalSubject: 'Cardiology',
         doctorImage: '/doctor1.jpeg',
       },
-      // ... 다른 예시 데이터
     ];
 
     setReservations(exampleData);

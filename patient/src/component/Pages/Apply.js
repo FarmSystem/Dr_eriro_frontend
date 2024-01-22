@@ -6,7 +6,7 @@ function Apply() {
     const [isChecked, setIsChecked] = useState(false);
     const [patientInfo, setPatientInfo] = useState({
         name: '',
-        gender: 'female', // 초기값은 여자로 설정
+        gender: 'female', 
         birthYear: '',
         birthMonth: '',
         birthDay: ''
@@ -43,12 +43,10 @@ function Apply() {
         }
 
         navigate('/reservationlist/detail');
-        // Here you can send the patientInfo data to the server
         console.log('Submitting patient information:', patientInfo);
-        // Add your API call or data submission logic here
     };
 
-    const [selectedTab, setSelectedTab] = useState('internalMedicine'); // 초기 선택된 탭
+    const [selectedTab, setSelectedTab] = useState('internalMedicine'); 
 
     const handleTabChange = (tab) => {
         setSelectedTab(tab);
@@ -61,7 +59,7 @@ function Apply() {
     };
 
     return (
-        <div>
+        <div className='center'>
             <h1>예약 신청</h1>
             <br />
             <hr />
@@ -87,7 +85,7 @@ function Apply() {
                 </div>
                 <div className='patient-info'>
                     <label>
-                        환자 이름:
+                        환자 이름 :
                         <input
                             type="text"
                             name="name"
@@ -96,7 +94,7 @@ function Apply() {
                         />
                     </label><br />
                     <label>
-                        환자 성별:
+                        환자 성별 :
                         <select
                             name="gender"
                             value={patientInfo.gender}
@@ -107,7 +105,7 @@ function Apply() {
                         </select>
                     </label><br />
                     <label>
-                        환자 생년월일:
+                        환자 생년월일 :
                         <select
                             name="birthYear"
                             value={patientInfo.birthYear}
@@ -229,7 +227,7 @@ function Apply() {
                 </div>
             </div>
 
-            <button className='reservation-button' onClick={handleSubmit}>예약 신청하기</button>
+            <button className='apply-button' onClick={handleSubmit}>예약 신청하기</button>
         </div>
     );
 }

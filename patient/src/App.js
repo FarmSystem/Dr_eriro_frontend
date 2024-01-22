@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'; 
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import AskPage from './component/Pages/AskPage';
 import ReservationPage from './component/Pages/ReservationPage';
 import Search from './component/Pages/Search';
@@ -30,7 +30,7 @@ const linkStyle = {
 
 function App() {
   return (
-    <BrowserRouter> 
+    <BrowserRouter>
       <div className="App">
         <div className="menubar">
           <nav>

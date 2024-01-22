@@ -37,8 +37,8 @@ const Treatmentlistdetail = () => {
         paymentMethod: '신용카드',
       });
 
-      setLoading(false);  
-    }, 1000); 
+      setLoading(false);
+    }, 1000);
   }, []);
 
   const navigate = useNavigate();
@@ -54,33 +54,33 @@ const Treatmentlistdetail = () => {
         <h1>Loading...</h1>
       ) : (
         <>
-          <h1>진료 내역</h1><br /><br /><br />
+          <h1>진료 내역</h1>
           <button className="small-button" onClick={redirectToOtherPage}>후기 작성하기</button>
           <div>
             <h2>병원 정보</h2>
-            <p>의사 이름: {hospitalInfo.doctorName}</p>
-            <p>병원 이름: {hospitalInfo.hospitalName}</p>
-            <p>예약 날짜: {hospitalInfo.appointmentDate}</p>
+            <p>의사 이름 : {hospitalInfo.doctorName}</p>
+            <p>병원 이름 : {hospitalInfo.hospitalName}</p>
+            <p>예약 날짜 : {hospitalInfo.appointmentDate}</p>
           </div>
           <br /><hr /><br />
-  
+
           <div>
             <h2>진료 정보</h2>
-            <p>증상: {medicalInfo.symptoms}</p>
-            <p>진료 대상: {medicalInfo.patientType}</p>
+            <p>증상 : {medicalInfo.symptoms}</p>
+            <p>진료 대상 : {medicalInfo.patientType}</p>
           </div>
           <br /><hr /><br />
-  
+
           <div>
             <h2>결제 정보</h2>
-            <p>결제 방법: {paymentInfo.paymentMethod}</p>
+            <p>결제 방법 : {paymentInfo.paymentMethod}</p>
           </div>
           <br /><br /><br /><br />
         </>
       )}
     </div>
   );
-  
+
 };
 
 export default Treatmentlistdetail;

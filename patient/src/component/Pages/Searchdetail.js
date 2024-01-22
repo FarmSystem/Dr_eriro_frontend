@@ -4,16 +4,16 @@ import { useNavigate } from 'react-router-dom';
 
 function Searchdetail() {
 
-    const navigate = useNavigate(); // useNavigate 훅 사용
+    const navigate = useNavigate();
 
-  const redirectToOtherPage = () => {
-    navigate('/apply'); 
-    scrollUp();
-  };
+    const redirectToOtherPage = () => {
+        navigate('/apply');
+        scrollUp();
+    };
 
-  const scrollUp = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
+    const scrollUp = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
     return (
         <div className='home'>
             <div className='box'>
@@ -64,7 +64,7 @@ function Searchdetail() {
                 </div>
             </div>
             <div className='hospital_img'>
-            <img src='/hospital_map.jpg' alt="이미지 설명" />
+                <img src='/hospital_map.jpg' alt="이미지 설명" />
             </div> <hr />
             <div className='mini'>
                 <div className='minibox'>
@@ -73,7 +73,7 @@ function Searchdetail() {
                 </div>
             </div>
 
-            <button  className='reservation-button' onClick={redirectToOtherPage}>예약 신청하기</button>
+            <button className='reservation-button' onClick={redirectToOtherPage}>예약 신청하기</button>
         </div>
     );
 }

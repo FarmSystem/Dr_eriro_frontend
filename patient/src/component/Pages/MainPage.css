@@ -2,13 +2,11 @@
     text-align: center;
 }
 
-/* 추가한 이미지에 스타일을 적용하기 위한 클래스 */
 .img-container {
-    margin-top: 20px; /* 버튼 아래에 간격을 줍니다. */
-    text-align: center; /* 가운데 정렬을 위한 설정 */
+    margin-top: 20px;
+    text-align: center;
 }
 
-/* 버튼 스타일 (예시) */
 .login-button {
     font-size: 20px;
     font-weight: bold;
@@ -35,13 +33,13 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 70px; /* 버튼 위에 간격을 줍니다. */
+    margin-top: 70px;
     margin-bottom: 50px;
 }
 
 .img-container img {
-    max-width: 2000px; /* 원하는 최대 가로 너비 */
-    max-height: 2000px; /* 원하는 최대 세로 높이 */
-    width: auto; /* 가로 크기를 최대 가로 너비에 맞게 조절 */
-    height: auto; /* 세로 크기를 최대 세로 높이에 맞게 조절 */
-  }
+    max-width: 2000px;
+    max-height: 2000px;
+    width: auto;
+    height: auto;
+}

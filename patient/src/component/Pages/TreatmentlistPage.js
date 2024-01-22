@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import './TreatmentlistPage.css'; 
+import './TreatmentlistPage.css';
 
 const linkStyle = {
-  textDecoration: 'none', // 밑줄 없애기
+  textDecoration: 'none',
   fontWeight: 'bold',
-  color: 'black', // 텍스트 색상을 원하는 색으로 설정
+  color: 'black',
   fontSize: '35px',
 };
 
@@ -13,7 +13,6 @@ const TreatmentlistPage = () => {
   const [treatments, setTreatments] = useState([]);
 
   useEffect(() => {
-    // 예시 데이터를 사용
     const exampleData = [
       {
         doctorName: '박준서의사',
@@ -48,12 +47,12 @@ const TreatmentlistPage = () => {
         {treatments.map((treatment, index) => (
           <li key={index} className="reservation-item">
             <div className="doctor-image">
-            <img src={treatment.doctorImage} alt={treatment.doctorName} />
+              <img src={treatment.doctorImage} alt={treatment.doctorName} />
             </div>
             <div className="info-container">
               <div className="doctor-info">
-              <Link to ={`/treatmentlist/detail`} style={linkStyle}>
-                <h3>{treatment.doctorName}</h3> </Link>
+                <Link to={`/treatmentlist/detail`} style={linkStyle}>
+                  <h3>{treatment.doctorName}</h3> </Link>
                 <span className="hospital-name">{treatment.hospitalName}</span>
               </div>
               <div className="appointment-info">
