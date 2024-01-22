@@ -10,6 +10,7 @@ const Home = () => {
   const [selectedPatient, setSelectedPatient] = useState(null);
   const [isProfileVisible, setIsProfileVisible] = useState(false);
   const [activeButton, setActiveButton] = useState("w");
+  const [pastTreatments, setPastTreatments] = useState([]);
 
   const handleButtonClick = (state) => {
     setActiveButton(state);
@@ -27,9 +28,35 @@ const Home = () => {
     }
   };
 
-  const handlePatientClick = (patient) => {
-    setSelectedPatient(patient);
+  const handlePatientClick = async (patient) => {
+    try {
+      // API 호출 및 응답을 기다림
+      const response = await fetch(
+        `http://15.165.145.132:8000/api/v1/reservations/patient-details/${patient.id}`
+      );
+
+      if (!response.ok) {
+        throw new Error(
+          `Failed to fetch past treatments for patient ${patient.id}`
+        );
+      }
+
+      // 응답을 JSON으로 변환
+      const pastTreatmentsData = await response.json();
+
+      // 가져온 정보를 상태에 저장
+      setPastTreatments(pastTreatmentsData);
+      setSelectedPatient(patient);
+    } catch (error) {
+      console.error(error);
+    }
+    // 추가
   };
+  useEffect(() => {
+    if (selectedPatient) {
+      handlePatientClick(selectedPatient);
+    }
+  }, [selectedPatient]);
 
   return (
     <div className="container">
@@ -123,6 +150,7 @@ const Home = () => {
                 patient={selectedPatient}
                 allpatient={patientlist}
                 onChildClick={handleButtonClick}
+                patientdetail={pastTreatments}
               />
             </div>
           </body>

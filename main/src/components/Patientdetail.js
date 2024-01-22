@@ -5,94 +5,41 @@ import Patient from "./PatientC";
 import Lastpati from "./lastpati";
 import loadingimg from "../asset/loading.gif";
 
-const Patientdetails = ({ patient, allpatient, onChildClick }) => {
+const Patientdetails = ({
+  patient,
+  allpatient,
+  onChildClick,
+  patientdetail,
+}) => {
   const [paymentType, setPaymentType] = useState(null);
   const [movementType, setMovementType] = useState(null);
   const [selectedTreatment, setSelectedTreatment] = useState(null);
   const [audioFile, setAudioFile] = useState(null);
   const [loading, setLoading] = useState(false);
   const [isModalOpen, setModalOpen] = useState(false);
-  const [pastdata, setPastdata] = useState([
-    {
-      id: 1,
-      patient: {
-        id: 1,
-        name: "서하은",
-        birth: "2024-01-20",
-        gender: "F",
-        number: "010-1234-5678",
-        height: 3,
-        weight: 5,
-        location: "중구",
-      },
-      status: "a",
-      visit_for: "멀라",
-      reservation_date: "2024-01-09T06:00:00+09:00",
-      underlying_disease: "복통",
-      prescribe: null,
-      doctor: 3,
-    },
-    {
-      id: 6,
-      patient: {
-        id: 1,
-        name: "서하은",
-        birth: "2024-01-20",
-        gender: "F",
-        number: "010-1234-5678",
-        height: 3,
-        weight: 5,
-        location: "중구",
-      },
-      status: "w",
-      visit_for: "알아",
-      reservation_date: "2024-01-15T06:00:00+09:00",
-      underlying_disease: "소화불량",
-      prescribe: "처방",
-      doctor: 3,
-    },
-    {
-      id: 6,
-      patient: {
-        id: 3,
-        name: "박환자",
-        birth: "2024-01-20",
-        gender: "F",
-        number: "010-1234-5678",
-        height: 3,
-        weight: 5,
-        location: "중구",
-      },
-      status: "a",
-      visit_for: "알아",
-      reservation_date: "2024-01-15T06:00:00+09:00",
-      underlying_disease: "소화불량",
-      prescribe: "처방",
-      doctor: 3,
-    },
-  ]);
+  const [pastdata1, setPastdata] = useState([]);
 
-  const fetchPastData = async () => {
-    try {
-      // API 호출 및 데이터 받아오는 로직
-      const response = await fetch(
-        `/api/v1/reservations/patient-details/${patient.id}`
-      );
-      const data = await response.json();
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       // API 호출 및 데이터 받아오는 로직
+  //       const response = await fetch(
+  //         `http://15.165.145.132:8000/api/v1/reservations/patient-details/${patient.id}`
+  //       );
+  //       const data = await response.json();
+  //       setPastdata(data);
+  //       // 받아온 데이터를 상태에 업데이트
+  //       return data;
+  //     } catch (error) {
+  //       console.error("Error fetching past data:", error);
+  //     }
+  //   };
 
-      // 받아온 데이터를 상태에 업데이트
-      setPastdata(data);
-    } catch (error) {
-      console.error("Error fetching past data:", error);
-    }
-  };
-  useEffect(() => {
-    fetchPastData();
-  });
+  //   fetchData(); // useEffect가 마운트될 때 한 번 호출
 
-  const handleCloseModal = () => {
-    setModalOpen(false);
-  };
+  //   console.log("Updated pastdata:", pastdata1);
+  // }, []);
+
   const handleUpload = () => {
     // 여기에서 서버로 파일을 업로드하거나 다른 작업을 수행할 수 있습니다.
     if (audioFile) {
@@ -110,66 +57,9 @@ const Patientdetails = ({ patient, allpatient, onChildClick }) => {
     }
   };
 
-  const pastdata1 = [
-    {
-      id: 1,
-      patient: {
-        id: 1,
-        name: "서하은",
-        birth: "2024-01-20",
-        gender: "F",
-        number: "010-1234-5678",
-        height: 3,
-        weight: 5,
-        location: "중구",
-      },
-      status: "a",
-      visit_for: "멀라",
-      reservation_date: "2024-01-09T06:00:00+09:00",
-      underlying_disease: "복통",
-      prescribe: null,
-      doctor: 3,
-    },
-    {
-      id: 6,
-      patient: {
-        id: 1,
-        name: "서하은",
-        birth: "2024-01-20",
-        gender: "F",
-        number: "010-1234-5678",
-        height: 3,
-        weight: 5,
-        location: "중구",
-      },
-      status: "w",
-      visit_for: "알아",
-      reservation_date: "2024-01-15T06:00:00+09:00",
-      underlying_disease: "소화불량",
-      prescribe: "처방",
-      doctor: 3,
-    },
-    {
-      id: 6,
-      patient: {
-        id: 3,
-        name: "박환자",
-        birth: "2024-01-20",
-        gender: "F",
-        number: "010-1234-5678",
-        height: 3,
-        weight: 5,
-        location: "중구",
-      },
-      status: "a",
-      visit_for: "알아",
-      reservation_date: "2024-01-15T06:00:00+09:00",
-      underlying_disease: "소화불량",
-      prescribe: "처방",
-      doctor: 3,
-    },
-  ];
   const pastrecod = () => {
+    const pastdata = patientdetail;
+
     const matchingRecords = pastdata.filter(
       (record) => record.patient.id === patient.id && record.status !== "w"
     );
@@ -192,13 +82,8 @@ const Patientdetails = ({ patient, allpatient, onChildClick }) => {
     } else {
       console.log("No matching records found.");
     }
-    // console.log(patient.id);
-    // if (patient.id === pastdata.patient.id && pastdata.status !=="w"){
-    //   if(pastdata.length >0){
-    //     const recordsInfo =
-    //   }
-    // }
   };
+
   const handleFileUpload = (e) => {
     const file = e.target.files[0];
     setAudioFile(file);
@@ -274,7 +159,7 @@ const Patientdetails = ({ patient, allpatient, onChildClick }) => {
         };
         console.log(requestData);
         const patientId = patient.id;
-        const apiUrl = `http://ec2-43-201-133-67.ap-northeast-2.compute.amazonaws.com:8000/api/v1/reservations/update-examination/${patientId}`;
+        const apiUrl = `http://15.165.145.132:8000/api/v1/reservations/update-examination/${patientId}`;
 
         try {
           // API 호출
@@ -413,13 +298,13 @@ const Patientdetails = ({ patient, allpatient, onChildClick }) => {
                 <button className="confbu2">에약 취소/ 전화</button>
               </div>
               {/* {isModalOpen && (
-                <div className="modal">
-                  <div className="modal-content">
-                    <p>예약이 확정되었습니다.</p>
-                    <button onClick={handleCloseModal()}>닫기</button>
+                  <div className="modal">
+                    <div className="modal-content">
+                      <p>예약이 확정되었습니다.</p>
+                      <button onClick={handleCloseModal()}>닫기</button>
+                    </div>
                   </div>
-                </div>
-              )} */}
+                )} */}
             </div>
             <div className="patientbodyseconddiv">
               <section className="patientside">
@@ -607,12 +492,15 @@ const Patientdetails = ({ patient, allpatient, onChildClick }) => {
             </div>
           </div>
           <div className="patientdetails-bottom">
-            <button onClick={handleConfirmReservation}> 진료 완료 </button>
+            <button className="confbu" onClick={handleConfirmReservation}>
+              진료 완료
+            </button>
           </div>
         </div>
       );
     }
     patient.pastreco = pastrecod();
+    console.log("pastreco : ", patient.pastreco);
     return (
       <div className="Patientdetails">
         <div
@@ -631,8 +519,8 @@ const Patientdetails = ({ patient, allpatient, onChildClick }) => {
             <div className="patientdetails-info">
               <div className="patientdetails-name">{patient.name}</div>
               <div className="pateinetdetails-spec">
-                {patient.age} | 건강보험 | 초진 | 방문진료 | {patient.gender} |{" "}
-                {patient.symptoms}
+                {patient.age} | 건강보험 | 초진 | 방문진료 | {patient.gender} |
+                복통{/* {patient.symptoms} */}
               </div>
               <div className="patientdetails-name">음성 메모</div>
               <div className="pateinetdetails-spec">
@@ -757,7 +645,10 @@ const Patientdetails = ({ patient, allpatient, onChildClick }) => {
           </div>
         </div>
         <div className="patientdetails-bottom">
-          <button onClick={handleConfirmReservation}> 진료 완료 </button>
+          <button className="confbu" onClick={handleConfirmReservation}>
+            {" "}
+            진료가 완료되었습니다.{" "}
+          </button>
         </div>
       </div>
     );
@@ -899,7 +790,7 @@ const Patientdetails = ({ patient, allpatient, onChildClick }) => {
   };
 
   if (!patient) {
-    return <div>없슴</div>;
+    return <div></div>;
   }
   return <div className="main-detail">{renderReservationButtons()}</div>;
 };

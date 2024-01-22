@@ -25,7 +25,7 @@ function App() {
   const getExaminationData = async () => {
     try {
       const doctorId = 3;
-      const apiUrl = `http://ec2-43-201-133-67.ap-northeast-2.compute.amazonaws.com:8000/api/v1/reservations/patientList/${doctorId}`;
+      const apiUrl = `http://15.165.145.132:8000/api/v1/reservations/patientList/${doctorId}`;
       const response = await fetch(apiUrl);
 
       if (response.ok) {
