@@ -174,7 +174,6 @@
 
 | 초기화면 |
 |----------|
-
 |<img width="1228" alt="스크린샷 2024-01-23 오후 3 13 37" src="https://github.com/FarmSystem/Dr_eriro_frontend/assets/84195580/5427e031-fdc0-4936-86f4-8cecd5adefa2">|
 
 <br>
@@ -187,7 +186,6 @@
 
 | 환자 관리 |
 |----------|
-
 |<img width="1398" alt="스크린샷 2024-01-23 오후 3 25 51" src="https://github.com/FarmSystem/Dr_eriro_frontend/assets/84195580/f4dce829-6a79-4126-9952-c98f8fe47f02">|
 
 <br>
