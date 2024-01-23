@@ -173,7 +173,8 @@
 <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=React&logoColor=black">
 
 ### ✔️Back-end
-<img src="https://img.shields.io/badge/django-092E20?style=flat-square&logo=django&logoColor=white"><img src="https://img.shields.io/badge/Amazon AWS-232F3E?style=flat-square&logo=Amazon AWS&logoColor=white">
+<img src="https://img.shields.io/badge/django-092E20?style=flat-square&logo=django&logoColor=white"><br>
+<img src="https://img.shields.io/badge/Amazon AWS-232F3E?style=flat-square&logo=Amazon AWS&logoColor=white">
 
 ## 6. 프로젝트 후기
 
