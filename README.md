@@ -1,4 +1,4 @@
-![IMG_6237](https://github.com/FarmSystem/Dr_eriro_frontend/assets/84195580/0a873f5c-4734-4d7e-8297-3c6ba0e6c7c1)# Dr_eriro_frontend
+# Dr.eriro
 
 <img width="909" alt="스크린샷 2024-01-23 오후 1 10 28" src="https://github.com/FarmSystem/Dr_eriro_frontend/assets/84195580/ea332798-afc4-4980-807f-e8402c5fea32">
 
