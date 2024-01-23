@@ -1,4 +1,4 @@
-# Dr_eriro_frontend
+![IMG_6237](https://github.com/FarmSystem/Dr_eriro_frontend/assets/84195580/0a873f5c-4734-4d7e-8297-3c6ba0e6c7c1)# Dr_eriro_frontend
 
 <img width="909" alt="스크린샷 2024-01-23 오후 1 10 28" src="https://github.com/FarmSystem/Dr_eriro_frontend/assets/84195580/ea332798-afc4-4980-807f-e8402c5fea32">
 
@@ -213,13 +213,14 @@
 
 <br><br>
 
+![IMG_6237](https://github.com/FarmSystem/Dr_eriro_frontend/assets/84195580/0a21a0e6-23ee-4d6e-9e00-fdee8562f95c)
 
-<img src="https://github.com/FarmSystem/Dr_eriro_frontend/assets/84195580/e7f37ac0-ffcc-4102-82b5-8ce668e2fb55" width="200" height="400"/>
+
 
 ### 🌾 Farm System에 감사 인사 🌾
 
 프로젝트를 통해 함께 성장하고 완성도 높은 결과물을 만들어낸 것에 대해 Farm System에게 깊은 감사의 말씀을 전합니다. 여러 어려움을 극복하고 협업을 통해 창의적인 솔루션을 찾아나가는 과정에서 Farm System의 지원과 협력이 큰 힘이 되었습니다.
-<br>
+<br><br>
 감사합니다, FarmSystem! 🚜🌟
 <br>
 모두 고생하셨어요 ~~
