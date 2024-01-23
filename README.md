@@ -92,7 +92,7 @@
 
 | 의사 목록 |
 |----------|
-|![login](https://user-images.githubusercontent.com/112460466/210177956-c716414e-01c2-4c1e-b1f7-6562b9b7a857.gif)|
+|![image](https://github.com/FarmSystem/Dr_eriro_frontend/assets/84195580/3cc3d7c5-7a11-4797-b5fd-e07f982ec9db)|
 
 <br>
 
@@ -140,7 +140,7 @@
 
 | 예약 내역 |
 |----------|
-|![yourProfile](https://user-images.githubusercontent.com/112460466/210380853-04f2d2bd-adab-4786-a8e8-c275ce765071.gif)|
+|![image](https://github.com/FarmSystem/Dr_eriro_frontend/assets/84195580/8b882039-2e82-4d87-b8de-afdff7478671)|
 
 <br>
 
@@ -171,6 +171,7 @@
 
 ### ✔️Frond-end
 <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=React&logoColor=black">
+
 ### ✔️Back-end
 <img src="https://img.shields.io/badge/django-092E20?style=flat-square&logo=django&logoColor=white"><img src="https://img.shields.io/badge/Amazon AWS-232F3E?style=flat-square&logo=Amazon AWS&logoColor=white">
 
@@ -210,6 +211,19 @@
 
 프로젝트를 통해 팀원들과의 원활한 커뮤니케이션이 프로젝트의 품질에 큰 영향을 미친다는 것을 깨달았습니다. 서로의 의견을 존중하고 효과적인 소통을 통해 공동의 목표를 달성하는 것이 중요하다는 것을 알게 되었습니다. 앞으로는 팀원들과의 원활한 소통을 위해 노력하며 더 나은 협업 환경을 만들어 나가고자 합니다.
 
-<br>
+<br><br>
 
-![IMG_6237](https://github.com/FarmSystem/Dr_eriro_frontend/assets/84195580/e7f37ac0-ffcc-4102-82b5-8ce668e2fb55)
+
+<img src="https://github.com/FarmSystem/Dr_eriro_frontend/assets/84195580/e7f37ac0-ffcc-4102-82b5-8ce668e2fb55" width="200" height="400"/>
+
+### 🌾 Farm System에 감사 인사 🌾
+
+프로젝트를 통해 함께 성장하고 완성도 높은 결과물을 만들어낸 것에 대해 Farm System에게 깊은 감사의 말씀을 전합니다. 여러 어려움을 극복하고 협업을 통해 창의적인 솔루션을 찾아나가는 과정에서 Farm System의 지원과 협력이 큰 힘이 되었습니다.
+<br>
+감사합니다, FarmSystem! 🚜🌟
+<br>
+모두 고생하셨어요 ~~
+
+
+
+
